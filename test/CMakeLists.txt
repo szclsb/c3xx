@@ -18,4 +18,5 @@ endmacro()
 
 package_add_test(test1
         ExchangerTest.cpp
-        SemaphoreTest.cpp)
+        SemaphoreTest.cpp
+        CountDownLatchTest.cpp)
