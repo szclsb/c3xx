@@ -14,8 +14,8 @@ namespace szclsb::c3xx {
         explicit Semaphore(size_t permits);
         void acquire();
         void release();
-        size_t QueueLength() const;
-        size_t WaitingPermits();
-        size_t AvailablePermits();
+        size_t queue_length() const;
+        size_t waiting_permits();
+        size_t available_permits();
     };
 }

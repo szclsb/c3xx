@@ -24,16 +24,16 @@ void c::Semaphore::release() {
     }
 }
 
-size_t c::Semaphore::QueueLength() const {
+size_t c::Semaphore::queue_length() const {
     return m_length;
 }
 
-size_t c::Semaphore::WaitingPermits() {
+size_t c::Semaphore::waiting_permits() {
     lock_guard<mutex> lock(m_mutex);
     return m_waiting;
 }
 
-size_t c::Semaphore::AvailablePermits() {
+size_t c::Semaphore::available_permits() {
     lock_guard<mutex> lock(m_mutex);
     return m_length - m_waiting;
 }

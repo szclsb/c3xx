@@ -16,8 +16,8 @@ public:
 
 TEST_F(SemaphoreFixture, test_init) {
     auto s = make_shared<c::Semaphore>(5);
-    ASSERT_EQ(5, s->QueueLength());
-    ASSERT_EQ(0, s->WaitingPermits());
+    ASSERT_EQ(5, s->queue_length());
+    ASSERT_EQ(0, s->waiting_permits());
 }
 
 TEST_F(SemaphoreFixture, test_permit) {
@@ -41,10 +41,10 @@ TEST_F(SemaphoreFixture, test_permit) {
         s->release();
     });
     this_thread::sleep_for(chrono::milliseconds(100));
-    ASSERT_EQ(2, s->WaitingPermits());
+    ASSERT_EQ(2, s->waiting_permits());
     *i = 2;
     t2.join();
     t3.join();
     t4.join();
-    ASSERT_EQ(0, s->WaitingPermits());
+    ASSERT_EQ(0, s->waiting_permits());
 }
