@@ -16,4 +16,6 @@ macro(package_add_test TESTNAME)
     set_target_properties(${TESTNAME} PROPERTIES FOLDER tests)
 endmacro()
 
-package_add_test(test1 ExchangerTest.cpp)
+package_add_test(test1
+        ExchangerTest.cpp
+        SemaphoreTest.cpp)
