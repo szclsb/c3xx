@@ -17,6 +17,7 @@ macro(package_add_test TESTNAME)
 endmacro()
 
 package_add_test(test1
+        CountDownLatchTest.cpp
+        CyclicBarrierTest.cpp
         ExchangerTest.cpp
-        SemaphoreTest.cpp
-        CountDownLatchTest.cpp)
+        SemaphoreTest.cpp)
