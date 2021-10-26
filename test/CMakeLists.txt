@@ -17,6 +17,7 @@ macro(package_add_test TESTNAME)
 endmacro()
 
 package_add_test(test1
+        BlockingQueueTest.cpp
         CountDownLatchTest.cpp
         CyclicBarrierTest.cpp
         ExchangerTest.cpp

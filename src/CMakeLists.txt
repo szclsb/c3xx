@@ -1,4 +1,5 @@
 set(HEADER_FILES
+        ../include/c3xx/BlockingQueue.hpp
         ../include/c3xx/CountDownLatch.h
         ../include/c3xx/CyclicBarrier.h
         ../include/c3xx/Exchanger.hpp
